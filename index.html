@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html lang="=pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dio Dino Game</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="./script/index.js" charset="UTF-8" defer></script>
-        <script src="./script/dino.js" charset="UTF-8" defer></script>
-        <script src="./script/cactus.js" charset="UTF-8" defer></script>
-        <script src="./script/timer.js" charset="UTF-8" defer></script>
-    </head>
-    <body>
-        <div class="timer">
-            <p id="display_time"></p>
-        </div>
-        <div class="background">
-            <div class="dino">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dio Dino Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script/dino.js" charset="UTF-8" defer></script>
+    <script src="./script/cactus.js" charset="UTF-8" defer></script>
+    <script src="./script/timer.js" charset="UTF-8" defer></script>
+    <script src="./script/index.js" charset="UTF-8" defer></script>
+</head>
+
+<body>
+    <div class="menu">
+        <table>
+            <tr>
+                <td>
+                    <button onClick="startGame()" id="start" class="botao">Iniciar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onClick="pauseGame()" id="pause" class="botao">Pausar</button>
+                    <p id="display_time"></p>
+                </td>
+
+            </tr>
+        </table>
+        <div class="container">
+            <div class="label" id="#label">1</div>
+            <div class="border">
+              <div id="#progress" class="progress"></div>
             </div>
+            <div class="buttons-group">
+              <button class="button" id="#resume">Resume</button>
+              <button class="button disabled" id="#pause">Pause</button>
+              <button class="button disabled" id="#reset">Reset</button>
+            </div>
+          </div>
+        <!-- <button onClick="startGame()" class="botao">Iniciar</button> -->
+        <!-- <button onClick="pauseGame()" id="pause" class="botao">Pausar</button> -->
+        <!-- <div class="timer">
+            <p id="display_time"></p>
+        </div> -->
+    </div>
+
+    <div class="background">
+        <div class="dino">
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
