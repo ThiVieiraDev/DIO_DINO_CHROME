@@ -1,4 +1,4 @@
-(function () {
+(function() {
     var delay = 3000;
 
     var label = document.getElementById("#label");
@@ -10,13 +10,13 @@
     var pauseBtn = document.getElementById("#pause");
     var resetBtn = document.getElementById("#reset");
 
-    var t = new timer(function () {
+    var t = new timer(function() {
         label.textContent = ++value;
     }, delay);
 
     progress.style.animationDuration = delay + "ms";
 
-    resumeBtn.addEventListener("click", function () {
+    resumeBtn.addEventListener("click", function() {
         t.resume();
 
         pauseBtn.classList.remove("disabled");
@@ -27,7 +27,7 @@
         progress.classList.remove("pause");
     });
 
-    pauseBtn.addEventListener("click", function () {
+    pauseBtn.addEventListener("click", function() {
         t.pause();
 
         pauseBtn.classList.add("disabled");
@@ -37,7 +37,7 @@
         progress.classList.add("pause");
     });
 
-    resetBtn.addEventListener("click", function () {
+    resetBtn.addEventListener("click", function() {
         t.reset();
 
         pauseBtn.classList.add("disabled");
@@ -49,21 +49,21 @@
         void progress.offsetWidth;
         progress.classList.add("animate");
     });
-}) ();
+})();
 
 function timer(callback, delay) {
     var timerId;
     var start;
     var remaining = delay;
 
-    this.pause = function () {
+    this.pause = function() {
         window.clearTimeout(timerId);
         remaining -= new Date() - start;
     };
 
-    var resume = function () {
+    var resume = function() {
         start = new Date();
-        timerId = window.setTimeout(function () {
+        timerId = window.setTimeout(function() {
             remaining = delay;
             resume();
             callback();
@@ -71,7 +71,7 @@ function timer(callback, delay) {
     };
     this.resume = resume;
 
-    this.reset = function () {
+    this.reset = function() {
         remaining = delay;
     };
 }

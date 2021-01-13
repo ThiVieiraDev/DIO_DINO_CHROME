@@ -21,8 +21,7 @@ function pauseGame() {
     console.log('fui selecionado');
     if (parado != 0) {
         alert('Favor iniciar o jogo antes');
-    }
-    else {
+    } else {
         // O time~distância pausa porém precisa criar a lógica para o cactus parar
         parado = 1;
         document.getElementById('pause').setAttribute('onclick', 'resumeGame()');
