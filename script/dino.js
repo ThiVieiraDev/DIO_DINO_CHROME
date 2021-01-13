@@ -43,5 +43,5 @@ function jump() {
     }, 20);
 }
 
-document.addEventListener('keyup', handleKeyUp);
+// document.addEventListener('keyup', handleKeyUp);
 // export { position };
