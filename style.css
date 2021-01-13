@@ -3,6 +3,8 @@
 }
 
 
+/* 
+
 @keyframes animation {
     from {
       width: 100%;
@@ -70,7 +72,7 @@
   .disabled {
     opacity: 0.5;
     pointer-events: none;
-  }
+  } */
 
 .menu {
     width: auto;
@@ -79,12 +81,13 @@
 #pause {
     opacity: 0;
 }
+
 .botao {
     width: 100px;
     height: 30px;
 }
 
-.timer p{
+.timer p {
     z-index: 1;
     background: #d0d0d0;
     opacity: 0.7;
@@ -94,7 +97,7 @@
     border-radius: 50%;
 }
 
-#display_time{
+#display_time {
     color: black;
     text-align: center;
 }
@@ -126,7 +129,6 @@
     from {
         background-position: 70000%;
     }
-
     to {
         background-position: 0;
     }
