@@ -3,16 +3,18 @@
 }
 
 .menu {
+    margin-top: 10%;
     width: auto;
 }
 
-#pause {
-    opacity: 0;
+table {
+    margin: auto;
 }
 
 .botao {
     width: 100px;
     height: 30px;
+    margin: 5%;
 }
 
 .timer p {
