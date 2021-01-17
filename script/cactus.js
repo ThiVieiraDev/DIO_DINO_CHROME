@@ -16,6 +16,11 @@ function createCactus() {
     background.appendChild(cactus);
 
     let leftInterval = setInterval(() => {
+            if (parado == 1) {
+                clearInterval(leftInterval);
+                background.removeChild(cactus);
+                atualiza_tempo();
+            }
             if (cactusPosition < -60) {
                 clearInterval(leftInterval);
                 background.removeChild(cactus);
@@ -46,6 +51,4 @@ function createCactus() {
 
     setTimeout(createCactus, randomTime);
 }
-
-
 // createCactus();

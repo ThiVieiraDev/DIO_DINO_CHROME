@@ -17,11 +17,10 @@ function startGame() {
 function pauseGame() {
     // Com o alert abaixo o jogo pausa, porém quando volta os cactus estão a milhão por hora kkk
     // alert('Jogo pausado');
-    console.log('fui selecionado');
     if (parado != 0) {
         alert('Favor iniciar o jogo antes');
     } else {
-        // O time~distância pausa porém precisa criar a lógica para o cactus parar
+        // O time distância pausa porém precisa criar a lógica para o cactus parar
         parado = 1;
         document.getElementById('pause').setAttribute('onclick', 'resumeGame()');
         document.getElementById('pause').innerHTML = "Resume";

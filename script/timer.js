@@ -23,11 +23,19 @@ function atualiza_tempo() {
         document.querySelector('.background').style.background = "url(background_dark.png)";
     }
 
-    // Alterando para modo dark após 3 segundos (distancia 300 km)
+    // Alterando para modo white após 8 segundos (distancia 300 km)
     if (tempo_segundos >= 8) {
-        document.querySelector('body').style.background = "#dddddd";
+        document.querySelector('body').style.background = "white";
         document.querySelector('#display_time').style.color = "black";
         document.querySelector('.background').style.background = "url(background.png)";
     }
+
+    // Alterando para modo dark após 3 segundos (distancia 300 km)
+    if (tempo_segundos >= 15) {
+        document.querySelector('body').style.background = "black";
+        document.querySelector('#display_time').style.color = "white";
+        document.querySelector('.background').style.background = "url(background_dark.png)";
+    }
+
     return;
 }
