@@ -16,17 +16,15 @@ function createCactus() {
     background.appendChild(cactus);
 
     let leftInterval = setInterval(() => {
-            if (parado == 1) {
-                clearInterval(leftInterval);
-                background.removeChild(cactus);
-                atualiza_tempo();
+            // Verifica se o jogo está pausado, se sim, não cria cactus
+            if (parado === 1) {
+                pauseCactus();
             }
             if (cactusPosition < -60) {
                 clearInterval(leftInterval);
                 background.removeChild(cactus);
             } else if (cactusPosition < 60 && cactusPosition > 0 && position < 60) {
                 //Gamer Over
-                // debugger;
                 clearInterval(leftInterval);
                 parado = 1;
                 window.clearInterval(tempo_controle);
@@ -50,5 +48,11 @@ function createCactus() {
         20);
 
     setTimeout(createCactus, randomTime);
+
+
+}
+
+function pauseCactus() {
+    cactusPosition = cactusPosition;
 }
 // createCactus();
